@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "link": "https://numpy.org/numpy-tutorials/content/tutorial-svd.html",
+        "summary": "This blog post is a tutorial on using Singular Value Decomposition (SVD) in NumPy to compress an image. The tutorial explains the difference between one-, two-, and n-dimensional arrays in NumPy, applying linear algebra operations to n-dimensional arrays without using for-loops, and understanding axis and shape properties for n-dimensional arrays. The tutorial demonstrates how to use SVD to generate a compressed approximation of an image, apply SVD to all color channels, and rebuild the approximation to obtain the final compressed image.",
+        "social_media_post": "",
+        "error": "Could not parse LLM output: I now know the final answer."
+    }
+]

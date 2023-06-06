@@ -1,0 +1,8 @@
+beautifulsoup4==4.12.2
+huggingface-hub==0.14.1
+requests==2.26.0
+langchain==0.0.187
+nbformat==5.9.0
+openai==0.27.7
+pandas==2.0.2
+python-dotenv
