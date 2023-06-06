@@ -2,8 +2,88 @@
     {
         "id": 1,
         "link": "https://numpy.org/numpy-tutorials/content/tutorial-svd.html",
-        "summary": "This blog post is a tutorial on using Singular Value Decomposition (SVD) in NumPy to compress an image. The tutorial explains the difference between one-, two-, and n-dimensional arrays in NumPy, applying linear algebra operations to n-dimensional arrays without using for-loops, and understanding axis and shape properties for n-dimensional arrays. The tutorial demonstrates how to use SVD to generate a compressed approximation of an image, apply SVD to all color channels, and rebuild the approximation to obtain the final compressed image.",
+        "summary": "In this tutorial, the author demonstrates how to use Singular Value Decomposition (SVD) – a matrix decomposition from linear algebra – to generate a compressed approximation of an image using NumPy. The tutorial explains the difference between dimensions and axes in NumPy, how to extract data from an image, and how to perform linear algebra operations on the RGB channels of the image. By applying SVD to the image, the author shows how to reconstruct both the full and approximated image, which highlights how well an image can be represented using fewer singular values. The tutorial is useful for those who want to understand image compression and related linear algebra concepts using Python and NumPy.",
+        "social_media_post": "",
+        "error": "Could not parse LLM output: I now know the final answer"
+    },
+    {
+        "id": 2,
+        "link": "https://numpy.org/numpy-tutorials/content/save-load-arrays.html",
+        "summary": "The blog post provides a tutorial on how to create, save, and load NumPy arrays with different methods, including savez, load, savetxt, and loadtxt. The tutorial demonstrates examples using these functions to save, delete, and load arrays, as well as creating human-readable CSV files. It mentions caveats relating to type preservation when saving arrays and offers solutions to overcome them.",
+        "social_media_post": "",
+        "error": "HTTP code 502 from API (<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n)"
+    },
+    {
+        "id": 3,
+        "link": "https://numpy.org/numpy-tutorials/content/tutorial-ma.html",
+        "summary": "The blog post is a tutorial on how to use masked arrays in NumPy to handle datasets with missing or invalid entries. The tutorial first explains the concept and usefulness of masked arrays, then demonstrates its application in analyzing COVID-19 data from early 2020. Using masked arrays, the tutorial shows how to filter unwanted entries, preserve masked values, and handle multiple masks. The post also explores data interpolation for estimating missing values using numpy.polynomial package.",
         "social_media_post": "",
         "error": "Could not parse LLM output: I now know the final answer."
+    },
+    {
+        "id": 4,
+        "link": "https://numpy.org/numpy-tutorials/content/mooreslaw-tutorial.html",
+        "summary": "In this tutorial, you compare Moore's Law against actual transistor counts for 53 years following Moore's prediction, determining the best-fit constants to describe the exponential growth of transistors on semiconductors. Key skills include loading data from a CSV file, performing linear regression and predicting exponential growth using ordinary least squares, and comparing exponential growth constants between models. The tutorial covers loading historical manufacturing data, building Moore's Law as an exponential function, calculating the historical growth curve for transistors, and sharing results as zipped arrays and CSV files.",
+        "social_media_post": "",
+        "error": "Could not parse LLM output: I now know the final answer."
+    },
+    {
+        "id": 5,
+        "link": "https://numpy.org/numpy-tutorials/content/tutorial-deep-learning-on-mnist.html",
+        "summary": "This tutorial demonstrates how to build and train a simple deep learning model from scratch using Python and NumPy to classify handwritten digits from the MNIST dataset. The tutorial covers loading the dataset, preprocessing the data, creating a neural network architecture with a hidden layer, forward and backward propagation, and model optimization. The tutorial then goes on to evaluate the model's performance on the training and test sets. Suggestions for further optimization and potential ethical considerations are also provided.",
+        "social_media_post": "",
+        "error": "Could not parse LLM output: I now know the final answer"
+    },
+    {
+        "id": 6,
+        "link": "https://numpy.org/numpy-tutorials/content/tutorial-x-ray-image-processing.html",
+        "summary": "This tutorial demonstrates how to build and train a simple deep learning model from scratch using Python and NumPy to classify handwritten digits from the MNIST dataset. The tutorial covers loading the dataset, preprocessing the data, creating a neural network architecture with a hidden layer, forward and backward propagation, and model optimization. The tutorial then goes on to evaluate the model's performance on the training and test sets. Suggestions for further optimization and potential ethical considerations are also provided.",
+        "social_media_post": "",
+        "error": "HTTP code 502 from API (<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n)"
+    },
+    {
+        "id": 7,
+        "link": "https://numpy.org/numpy-tutorials/content/tutorial-static_equilibrium.html",
+        "summary": "This blog post is a tutorial on finding static equilibrium in engineering problems using NumPy. It demonstrates how to represent points, vectors, and moments with NumPy, find the normal of vectors, and perform matrix calculations. The tutorial covers solving equilibrium with Newton's second law, finding values with physical properties, using arrays for points, forces, and moments in three-dimensional space, as well as applying these concepts to real-world examples such as a beam with two cables and an applied force. It also explains how the same process can be applied to kinetic problems and systems with more or fewer dimensions.",
+        "social_media_post": "🚀 Attention Engineers and Data Science enthusiasts! 🎓 Dive into our latest blog post where we explore finding STATIC EQUILIBRIUM in engineering problems using #NumPy. 💡\n\n🔧 Learn how to:\n1️⃣ Represent points, vectors & moments\n2️⃣ Find the normal of vectors\n3️⃣ Perform matrix calculations\n4️⃣ Apply Newton's Second Law ✅\n5️⃣ Use arrays in 3D space 🌐\n6️⃣ Tackle real-world examples like beams & cables 🏗️\n\nPLUS 💥 Discover how to apply this method to kinetic problems and systems with various dimensions! 🎯\n\nDon't miss this amazing tutorial – perfect for all your #Engineering and #DataScience needs. Start solving problems like a pro! 🔥👨‍💻👩‍💻\n\n🔗 (Link to blog post)\n📚 #Python #JupyterNotebook #MatrixCalculations #Physics #PhysicalProperties #AppliedForce #STEM\n🔄 Share with fellow engineers and data scientists! 💬 Leave us a comment with your thoughts!"
+    },
+    {
+        "id": 8,
+        "link": "https://numpy.org/numpy-tutorials/content/tutorial-plotting-fractals.html",
+        "summary": "This tutorial on plotting fractals covers various types of fractals, including Newton fractals, Julia sets, and the Mandelbrot set. The tutorial discusses how to use NumPy for creating efficient calculations for fractal generation and provides examples for experimenting with general fractal types. The readers will learn the basics of complex numbers in NumPy, gain a better understanding of NumPy universal functions and Boolean indexing, as well as explore creating their own unique fractal visualizations. Some prerequisites include familiarity with Python, NumPy, and Matplotlib, elementary mathematical functions, basic understanding of complex numbers, and some knowledge of derivatives.",
+        "social_media_post": "🚀 Hey there, fractal enthusiasts and Python lovers! 🐍 Dive into our latest tutorial on plotting amazing fractals 🌌 We'll be exploring #NewtonFractals, #JuliaSets, and the #MandelbrotSet, using #NumPy for efficient calculations in #fractal generation. 📊\n\nGet ready to learn complex numbers in NumPy while understanding universal functions and Boolean indexing. 🧠 Create your own breathtaking fractal visualizations by applying your Python, NumPy, and Matplotlib chops! 🎨🖥️\n\n🔑 Prerequisites: Familiarity with #Python, #NumPy, #Matplotlib, elementary mathematical functions, basic understanding of complex numbers, and a little know-how on derivatives.\n\nDon't miss out on this incredible journey to unlock the beauty of fractals! 🤩🌈 Join us now! #DigitalMarketing #DataScience #FractalArt\n\n✨💻 Happy coding! ✌️👨‍💻"
+    },
+    {
+        "id": 9,
+        "link": "https://numpy.org/numpy-tutorials/content/tutorial-air-quality-analysis.html",
+        "summary": "The blog post is a tutorial on air quality analysis using Python and the NumPy library. It teaches how to perform a paired Student's t-test and interpret the t and p values. The tutorial covers importing necessary libraries, building and processing a dataset with pollutant measurements, calculating the Air Quality Index (AQI), performing paired Student's t-test on the AQIs, and interpreting the results. The analysis focuses on air quality in Delhi before and during the lockdown from March to June 2020.",
+        "social_media_post": "🌏💨 Do you know how the lockdown affected Delhi's air quality? 🌫️🧐 Dive into our latest tutorial exploring air quality analysis using Python 🐍 and NumPy 🧪! Master the art of importing libraries 📚, building and processing datasets 📊, calculating the Air Quality Index (AQI) 📈, and performing the notorious Student's t-test on the AQIs 🔬. Let's discover the effects of lockdown on Delhi's air quality from March to June 2020 📆. Unravel the truth, and #BreatheEasy! 💚🌱\n\n#Python #NumPy #AirQuality #DataScience #Tutorial #AQI #Delhi #Lockdown #EnvironmentalAwareness 🌍♻️"
+    },
+    {
+        "id": 10,
+        "link": "https://numpy.org/numpy-tutorials/content/pairing.html",
+        "summary": "The blog post is a tutorial on how to keep .ipynb and .md files in sync for NumPy tutorials using Jupytext. It highlights the pros and cons of using MyST-NB and JSON formatted notebooks and guides users on pairing notebook files in different Jupyter environments. The tutorial helps users work with their files using various methods while maintaining the sync between both formats.",
+        "social_media_post": "",
+        "error": "Could not parse LLM output: I now know the final answer."
+    },
+    {
+        "id": 11,
+        "link": "https://numpy.org/numpy-tutorials/content/tutorial-style-guide.html",
+        "summary": "The blog post is a style guide for writing NumPy tutorials. It discusses the three standard headings (What you'll do, What you'll learn, and What you'll need), the difference between a \"tutorial\" and a \"how-to\", and various tips for effective tutorial writing. These tips include using verbs in titles, using lowercase for titles, avoiding abstraction, following the Google developer documentation style guide, using plots and illustrations, and using real datasets when possible. The post also suggests three optional sections for tutorials: On your own, In practice, and Further reading.",
+        "social_media_post": "🚀 Attention all Data Science enthusiasts! 🚀 We've just published a 💯 comprehensive style guide on writing 𝗡𝘂𝗠𝗣𝘆 tutorials, with everything you need to create an engaging and informative learning experience! 🎓 📖\n\nDive into our latest blog to discover:\n✅ Standardized headings for smooth navigation 🖊️\n✅ Clear distinctions between tutorials and how-tos 💡\n✅ Proven ✍️ tips for effective writing and teaching\n✅ Optional sections to elevate your tutorials to new heights 🌟\n\nGet ready to elevate your NumPy game and make a difference in the Data Science community! 🌐 Let us know your favorite tips in the comments below! 😉\n\nRead it here: [Link to Blog Post]\n\n#NumPy #Python #DataScience #JupyterNotebooks #TutorialTips #DigitalMarketing #EffectiveWriting #TeachingDataScience 🎉💻"
+    },
+    {
+        "id": 12,
+        "link": "https://numpy.org/numpy-tutorials/content/tutorial-deep-reinforcement-learning-with-pong-from-pixels.html",
+        "summary": "The blog post is a style guide for writing NumPy tutorials. It discusses the three standard headings (What you'll do, What you'll learn, and What you'll need), the difference between a \"tutorial\" and a \"how-to\", and various tips for effective tutorial writing. These tips include using verbs in titles, using lowercase for titles, avoiding abstraction, following the Google developer documentation style guide, using plots and illustrations, and using real datasets when possible. The post also suggests three optional sections for tutorials: On your own, In practice, and Further reading.",
+        "social_media_post": "",
+        "error": "Could not parse LLM output: I need to generate a summary from the extracted content.\nSummary: This tutorial demonstrates how to create a deep reinforcement learning agent to play the game of Pong using NumPy and OpenAI Gym. It covers prerequisites such as Python, NumPy, Gym, deep learning, and Jupyter notebook environments. The tutorial includes a deep RL glossary, setting up Pong, preprocessing frames, creating the policy and forward pass, setting up the update step (backpropagation), defining the discounted rewards function, and training the agent for several episodes. Finally, it suggests next steps and provides additional resources in an appendix."
+    },
+    {
+        "id": 13,
+        "link": "https://numpy.org/numpy-tutorials/content/tutorial-nlp-from-scratch.html",
+        "summary": "The blog post is a style guide for writing NumPy tutorials. It discusses the three standard headings (What you'll do, What you'll learn, and What you'll need), the difference between a \"tutorial\" and a \"how-to\", and various tips for effective tutorial writing. These tips include using verbs in titles, using lowercase for titles, avoiding abstraction, following the Google developer documentation style guide, using plots and illustrations, and using real datasets when possible. The post also suggests three optional sections for tutorials: On your own, In practice, and Further reading.",
+        "social_media_post": "",
+        "error": "Could not parse LLM output: Thought: I need to extract data from the given webpage.\nAction:\n```json\n{\n  \"action\": \"extract_data_from_page\",\n  \"action_input\": \"https://numpy.org/numpy-tutorials/content/tutorial-nlp-from-scratch.html\"\n}\n```"
     }
 ]

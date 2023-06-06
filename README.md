@@ -33,7 +33,7 @@ Below is a sample data entry:
     }
 ```
 
-This dataset was then uploaded to Hugging Face. You can find it via the model card. 
+This dataset was then uploaded to Hugging Face. You can find it via the model card [lgfunderburk/numpy-docs](https://huggingface.co/datasets/lgfunderburk/numpy-docs)
 
 ## Set up
 
