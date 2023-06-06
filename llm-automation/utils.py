@@ -5,7 +5,6 @@ import requests
 from bs4 import BeautifulSoup
 import openai
 import pandas as pd
-from utils import Prompter
 from datasets import Dataset
 
 class Prompter:

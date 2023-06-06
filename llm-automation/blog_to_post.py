@@ -23,7 +23,20 @@ if __name__=="__main__":
 
     # This is an example for the FASTAPI documentation
     # Replace with your list of links 
-    links = ["https://numpy.org/numpy-tutorials/content/tutorial-svd.html"]
+    links = ["https://numpy.org/numpy-tutorials/content/tutorial-svd.html",
+             "https://numpy.org/numpy-tutorials/content/save-load-arrays.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-ma.html",
+             "https://numpy.org/numpy-tutorials/content/mooreslaw-tutorial.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-deep-learning-on-mnist.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-x-ray-image-processing.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-static_equilibrium.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-plotting-fractals.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-air-quality-analysis.html",
+             "https://numpy.org/numpy-tutorials/content/pairing.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-style-guide.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-deep-reinforcement-learning-with-pong-from-pixels.html",
+             "https://numpy.org/numpy-tutorials/content/tutorial-nlp-from-scratch.html"
+             ]
 
     master_dic = []
     i = 0
@@ -60,8 +73,8 @@ if __name__=="__main__":
     # Format 2: Load to Hugging Face
     # Format data as a dataframe
     try:
-        hf_username = "your-hugging-face-username"
-        dataset_name = "your-dataset-name"
+        hf_username = "lgfunderburk"
+        dataset_name = "numpy-docs"
 
         save_data_to_hugging_face(master_dic, hf_username, dataset_name)
     except Exception as e:
