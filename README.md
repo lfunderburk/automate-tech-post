@@ -118,15 +118,17 @@ The following notebook within this repository guides you through the steps: `not
 
 ## Using the fine-tuned model
 
-If you simply want to use the model I fine-tuned with the synthetic dataset, you can simply edit the content of the topic in
+If you simply want to use the model I fine-tuned with the synthetic dataset, you can open the notebook 
 
 ```
-llm-automation/fine_tuned_automated_post.py
+noebooks/use_fine_tuned_model.ipynb
 ```
 
 The topic can be specified as follows:
 
 ```
-  topic = "This tutorial demonstrates how to build and train a simple deep learning model from scratch using Python and NumPy to classify handwritten digits from the MNIST dataset. The tutorial covers loading the dataset, preprocessing the data, creating a neural network architecture with a hidden layer, forward and backward propagation, and model optimization. The tutorial then goes on to evaluate the model's performance on the training and test sets. Suggestions for further optimization and potential ethical considerations are also provided. "
+  topic = "This blog post is a tutorial about using NumPy to solve static equilibrium problems in three-dimensional space. Readers will learn how to represent points, vectors, and moments with NumPy, find the normal of vectors, and use NumPy for matrix calculations. The tutorial covers the application of Newton's second law to simple examples of force vectors and introduces more complex cases involving reaction forces and moments. The post also discusses the use of NumPy functions in more varied problems, including kinetic problems and different dimensions."
         
 ```
+
+The `make_inference` function will then use this topic to generate a sample social media post.
