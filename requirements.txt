@@ -10,5 +10,5 @@ bitsandbytes
 datasets
 accelerate
 loralib
+transformers
 git+https://github.com/huggingface/peft.git 
-git+https://github.com/huggingface/transformers.git

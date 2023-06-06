@@ -10,13 +10,40 @@ The purpose of this repository is to demonstrate how you can leverage two techni
 
 This approach assumes you have an OpenAI API key. The code in this repository uses GPT-4, but you can modify this to use other OpenAI models. 
 
-#### 2. Parameter Efficient Fine-Tuning with BLOOMZ-3B and LoRA (leverages deployment to Hugging Face)
+### 2. Parameter Efficient Fine-Tuning with BLOOMZ-3B and LoRA (leverages deployment to Hugging Face)
 
 This approach assumes you have a Hugging Face account, as well as read and write access tokens. Fine-tuning will require GPU and high RAM usage. 
 
+The steps are as follows:
+
+1. Download BLOOMZ-3B from Hugging Face via its model card `bigscience/bloomz-3b`. This is tokenizer for all of the BLOOM models.
+
+2. We thjen apply post processing on the 8-bit model to enable training, freeze layers, and cast the layer-norm in float32 for stability. We cast output of the last layer in float32. 
+
+3. Load a parameter efficient fine-tuning (PEFT) model and apply low-rank adapters (LoRA). 
+
+4. Preprocess data via a prompt 
+
+```
+def generate_prompt(summary: str, social_media_post: str) -> str:
+  prompt = f"### INSTRUCTION\nBelow is a summary of a post\
+           and its corresponding social media post, please \
+           write social media post for this blog.\
+           \n\n### Summary:\n{summary}\n### Post:\n{social_media_post}\n"
+  return prompt
+```
+
+The data can then be mapped
+
+```
+mapped_dataset = dataset.map(lambda samples: tokenizer(generate_prompt(samples['summary'], samples['social_media_post'])))
+```
+
+5. Used the `.Trainer` method from the `transformers` object on the mapped data. 
+
 ![](LLM-automation.jpg)
 
-In this notebook I combined both approaches to first curate synthetic data with the LangChain pipeline, and used the resulting dataset along with the techniques mentioned to fine-tune a model. 
+In this repository I combined both approaches to first curate synthetic data with the LangChain pipeline, and used the resulting dataset along with the techniques mentioned to fine-tune a model. 
 
 ### Data
 
