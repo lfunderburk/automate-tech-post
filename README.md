@@ -37,3 +37,9 @@ python llm-automation/blog_to_post.py
 ## Fine-tuning a model
 
 If you would prefer not to use OpenAI API and fine tune a model instead, you can use the following colab notebook. 
+
+### Assumptions:
+
+Training the model requires GPUs and high RAM. If your local machine does not support this, you can use Colab Pro with the following specs:
+
+![]("./colab-reqs.png")
