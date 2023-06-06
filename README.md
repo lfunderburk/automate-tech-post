@@ -33,6 +33,8 @@ Below is a sample data entry:
     }
 ```
 
+This dataset was then uploaded to Hugging Face. You can find it via the model card. 
+
 ## Set up
 
 Create a virtual environment
