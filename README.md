@@ -6,6 +6,8 @@ The purpose of this repository is to demonstrate how you can leverage two techni
 
 ### 1. LangChain 
 
+You can find the relevant code for this approach under `llm-automation/blog_to_post.py` and `llm-automation/utils.py`
+
 ![](langchain.jpg)
 
 This approach assumes you have an OpenAI API key. The code in this repository uses GPT-4, but you can modify this to use other OpenAI models. 
@@ -14,15 +16,19 @@ This approach assumes you have an OpenAI API key. The code in this repository us
 
 This approach assumes you have a Hugging Face account, as well as read and write access tokens. Fine-tuning will require GPU and high RAM usage. 
 
+This approach is using the synthetic data generated in step 1. 
+
+You can find the relevant code for this approach under `notebooks/bloom_tuning.ipynb`.
+
 The steps are as follows:
 
 1. Download BLOOMZ-3B from Hugging Face via its model card `bigscience/bloomz-3b`. This is tokenizer for all of the BLOOM models.
 
-2. We thjen apply post processing on the 8-bit model to enable training, freeze layers, and cast the layer-norm in float32 for stability. We cast output of the last layer in float32. 
+2. We then apply post processing on the 8-bit model to enable training, freeze layers, and cast the layer-norm in float32 for stability. We cast output of the last layer in float32. 
 
 3. Load a parameter efficient fine-tuning (PEFT) model and apply low-rank adapters (LoRA). 
 
-4. Preprocess data via a prompt 
+4. Preprocess synthetic data via a prompt 
 
 ```
 def generate_prompt(summary: str, social_media_post: str) -> str:
@@ -39,7 +45,7 @@ The data can then be mapped
 mapped_dataset = dataset.map(lambda samples: tokenizer(generate_prompt(samples['summary'], samples['social_media_post'])))
 ```
 
-5. Used the `.Trainer` method from the `transformers` object on the mapped data. 
+5. Used the `.Trainer` method from the `transformers` library on the mapped data. 
 
 ![](LLM-automation.jpg)
 
@@ -104,10 +110,23 @@ If you would prefer not to use OpenAI API and fine-tune a model instead, you can
 
 ### Assumptions:
 
-This approach leverages the following techniques and models:
-
-###
-
 Training the model requires GPUs and high RAM. If your local machine does not support this, you can use Colab Pro with the following specs:
 
 ![](colab-reqs.png)
+
+The following notebook within this repository guides you through the steps: `notebooks/bloom_tuning.ipynb`.
+
+## Using the fine-tuned model
+
+If you simply want to use the model I fine-tuned with the synthetic dataset, you can simply edit the content of the topic in
+
+```
+llm-automation/fine_tuned_automated_post.py
+```
+
+The topic can be specified as follows:
+
+```
+  topic = "This tutorial demonstrates how to build and train a simple deep learning model from scratch using Python and NumPy to classify handwritten digits from the MNIST dataset. The tutorial covers loading the dataset, preprocessing the data, creating a neural network architecture with a hidden layer, forward and backward propagation, and model optimization. The tutorial then goes on to evaluate the model's performance on the training and test sets. Suggestions for further optimization and potential ethical considerations are also provided. "
+        
+```
